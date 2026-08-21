@@ -46,6 +46,7 @@ rubber.cache
 
 ## Build tool directories for auxiliary files
 # latexrun
+build/
 latex.out/
 
 ## Auxiliary and intermediate files from other packages:
