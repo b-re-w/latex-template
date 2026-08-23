@@ -1,0 +1,14 @@
+[project]
+name = "paper"
+version = "0.1.0"
+description = "LaTeX writing environment built from conference templates"
+requires-python = ">=3.9"
+dependencies = [
+    # Only used by `uv run build.py --install-tex`, which downloads TinyTeX
+    # into .venv/tinytex. If a TeX distribution is already installed on the
+    # machine, build.py uses that instead and this is never called.
+    "pytinytex>=0.5.1",
+]
+
+[tool.uv]
+package = false

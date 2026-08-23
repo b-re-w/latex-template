@@ -1,0 +1,31 @@
+{
+  // No absolute paths here. build.py resolves the TeX toolchain at runtime
+  // (in-repo .venv/tinytex first, then a system installation), which also
+  // keeps this file identical on Windows and macOS.
+
+  "latex-workshop.latex.rootFile": "%WORKSPACE_FOLDER%/paper/main.tex",
+
+  // Where the extension looks for the built PDF. The build itself writes to
+  // build/ (see latexmkrc); only the finished PDF is copied to paper/main.pdf,
+  // which is what the viewer should open.
+  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/paper",
+  "latex-workshop.latex.autoClean.run": "never",
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  "latex-workshop.latex.recipe.default": "latexmk",
+  "latex-workshop.latex.recipes": [
+    { "name": "latexmk", "tools": ["build"] }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "build",
+      "command": "uv",
+      "args": ["run", "build.py"],
+      "cwd": "%WORKSPACE_FOLDER%"
+    }
+  ],
+
+  "[latex]": { "editor.wordWrap": "on" },
+  "[tex]": { "editor.wordWrap": "on" }
+}
