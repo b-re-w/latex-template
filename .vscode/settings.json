@@ -1,5 +1,5 @@
 {
-  // No absolute paths here. build.py resolves the TeX toolchain at runtime
+  // No absolute paths here. latexmkrc.py resolves the TeX toolchain at runtime
   // (in-repo .venv/tinytex first, then a system installation), which also
   // keeps this file identical on Windows and macOS.
 
@@ -21,7 +21,7 @@
     {
       "name": "build",
       "command": "uv",
-      "args": ["run", "build.py"],
+      "args": ["run", "latexmkrc.py"],
       "cwd": "%WORKSPACE_FOLDER%"
     }
   ],
