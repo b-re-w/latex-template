@@ -1,0 +1,18 @@
+%
+% Your own packages and macros go here. This file is loaded from main.tex,
+% at the point the venue's style expects additions to the preamble.
+%
+\usepackage{xcolor}
+
+%
+% --- inline annotations
+%
+% Declared with providecommand because some venue styles ship their own \todo
+% (ICML loads todonotes, for instance). Where they do, the venue's version wins.
+%
+\providecommand{\red}[1]{{\color{red}#1}}
+\providecommand{\todo}[1]{{\color{red}#1}}
+\providecommand{\TODO}[1]{\textbf{\color{red}[TODO: #1]}}
+% --- disable by uncommenting
+% \renewcommand{\TODO}[1]{}
+% \renewcommand{\todo}[1]{#1}

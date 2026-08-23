@@ -30,7 +30,7 @@
 
 
 %%%%%%%%% TITLE - PLEASE UPDATE
-\title{\LaTeX\ Author Guidelines for \confName~Proceedings}
+\title{Your Paper Title Here}
 
 %%%%%%%%% AUTHORS - PLEASE UPDATE
 \author{First Author\\
@@ -51,15 +51,27 @@ First line of institution2 address\\
 
 \begin{document}
 \maketitle
-\input{sec/0_abstract}    
-\input{sec/1_intro}
-\input{sec/2_formatting}
-\input{sec/3_finalcopy}
+\input{sections/00_abstract}
+
+\input{sections/01_introduction}
+\input{sections/02_related_work}
+\input{sections/03_method}
+\input{sections/04_experiments}
+\input{sections/05_conclusion}
+
 {
     \small
     \bibliographystyle{ieeenat_fullname}
-    \bibliography{main}
+    % Keeps the bibliography non-empty: with no citations at all, bibtex emits an
+    % empty thebibliography and some venue styles treat that as a fatal error.
+    % Delete this line, and the placeholder entry in references.bib, once the paper
+    % cites real work.
+    \nocite{placeholder}
+
+    \bibliography{references}
 }
 
+\appendix
+\input{sections/appendix/a_details}
 
 \end{document}
