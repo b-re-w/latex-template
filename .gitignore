@@ -48,6 +48,8 @@ rubber.cache
 # latexrun
 build/
 latex.out/
+paper/main.pdf
+paper/main.synctex.gz
 
 ## Auxiliary and intermediate files from other packages:
 # algorithms
@@ -330,3 +332,8 @@ TSWLatexianTemp*
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
+
+## Python / uv
+.venv/
+__pycache__/
+uv.lock
