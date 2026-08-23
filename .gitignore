@@ -333,7 +333,11 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 
-## Python / uv
+# Python / uv
 .venv/
 __pycache__/
 uv.lock
+
+# AI Agents
+.agents/
+.claude/
